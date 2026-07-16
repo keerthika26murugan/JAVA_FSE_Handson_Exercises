@@ -1,46 +1,95 @@
 # Java FSE Hanson Exercises
 
-This repository documents the exercises completed during the **Java Full Stack Engineering (FSE)** training program. The repository covers Java fundamentals, Spring Framework, Spring Boot, Spring Data JPA, Hibernate, Design Patterns, Testing, Logging, and Database Programming.
+This repository documents the exercises completed during the **Java Full Stack Engineering (FSE) Digital Nurture Program**. The exercises cover Core Java, Spring Framework, Spring Boot, Spring Data JPA, Hibernate, RESTful Web Services, Microservices, Testing, Logging, JWT Authentication, and Database Programming.
 
 ---
 
 # Week 1 – Core Java, Design Patterns, Testing & Logging
 
-## Core Modules & Objectives
+## Modules Covered
 
-### 1. Design Principles and Patterns
-**Objective:** Implement core design patterns to improve code maintainability, scalability, and reusability.
+### 1. Design Principles & Design Patterns
+**Objective:** Learn software design principles and implement commonly used design patterns.
 
-### 2. Data Structures and Algorithms
-**Objective:** Solve business problems using efficient algorithms and data structures.
+### Topics
+- SOLID Principles
+- Singleton Pattern
+- Factory Pattern
+- Builder Pattern
+- Dependency Injection (Concept)
+
+---
+
+### 2. Data Structures & Algorithms
+
+**Objective:** Solve programming problems using efficient algorithms.
+
+### Topics
+
+- Arrays
+- Strings
+- Searching
+- Sorting
+- Time Complexity
+- Space Complexity
+
+---
 
 ### 3. PL/SQL Programming
-**Objective:** Develop database-level logic using stored procedures, functions, cursors, and control structures.
 
-### 4. Test Driven Development (TDD) using JUnit 5 & Mockito
-**Objective:** Learn Test-Driven Development (TDD) and dependency isolation.
+**Objective:** Develop database programs using Oracle PL/SQL.
 
-**Topics Covered**
+### Topics
+
+- Procedures
+- Functions
+- Cursors
+- Triggers
+- Exception Handling
+- Packages
+
+---
+
+### 4. Test Driven Development (JUnit 5 & Mockito)
+
+**Objective:** Learn unit testing and mocking techniques.
+
+### Topics
+
 - JUnit 5
 - Assertions
 - Test Fixtures
 - Mockito
-- Mocking
+- Mock Objects
 - Stubbing
-- Verifying Interactions
+- Verify Methods
+
+---
 
 ### 5. SLF4J Logging Framework
-**Objective:** Implement application logging for debugging, monitoring, and error tracking.
 
-**Topics Covered**
+**Objective:** Implement logging for monitoring and debugging.
+
+### Topics
+
 - SLF4J
 - Logback
 - Logger Configuration
 - Logging Levels
+- Console Logging
 
-### Submission Evidence
-- Verification Success – Screenshot Attached
-- Logging Success – Screenshot Attached
+---
+
+## Learning Outcomes
+
+- Core Java Programming
+- Object-Oriented Programming
+- Design Patterns
+- Algorithm Design
+- Database Programming
+- Unit Testing
+- Mocking
+- Application Logging
 
 ---
 
@@ -50,46 +99,47 @@ This repository documents the exercises completed during the **Java Full Stack E
 
 **Objective:** Learn Spring Framework fundamentals using Maven.
 
-**Topics Covered**
+### Topics
+
 - Spring IoC Container
 - Dependency Injection
+- Bean Configuration
 - Constructor Injection
 - Setter Injection
-- Bean Configuration
 - Maven Project Structure
 
 ---
 
 ## 2. Spring Boot & Spring Data JPA
 
-### Exercise 1 – Employee Management System (Setup & Entity Mapping)
+### Exercise 1 – Employee Management System
 
-**Objective:** Build a Spring Boot application and configure Spring Data JPA.
+**Objective:** Configure Spring Boot with Spring Data JPA.
 
-**Topics Covered**
-- Spring Boot Project Setup
+### Topics
+
+- Spring Boot Setup
 - Maven
-- H2 Database Configuration
-- Employee Entity
+- H2 Database
+- Entity Mapping
 - Department Entity
-- One-to-Many Relationship
-- Many-to-One Relationship
-- JPA Entity Mapping
+- Employee Entity
+- One-To-Many Mapping
+- Many-To-One Mapping
 
 ---
 
 ### Exercise 2 – CRUD Repository & REST API
 
-**Objective:** Implement CRUD operations using Spring Data JPA.
+**Objective:** Perform CRUD operations using Spring Data JPA.
 
-**Topics Covered**
+### Topics
+
 - JpaRepository
-- Repository Layer
 - REST Controller
 - GET API
 - POST API
 - DELETE API
-- Custom Query Methods
 - Pagination
 - Sorting
 
@@ -97,16 +147,219 @@ This repository documents the exercises completed during the **Java Full Stack E
 
 ### Exercise 3 – Advanced Hibernate Features
 
-**Objective:** Learn advanced Hibernate and Spring Data JPA concepts.
+**Objective:** Learn advanced persistence concepts.
 
-**Topics Covered**
+### Topics
+
+- Hibernate
 - JPA Auditing
 - CreatedDate
 - LastModifiedDate
 - Projection
-- Hibernate Batch Processing
-- Hibernate Configuration
+- Batch Processing
 - Multiple Datasource (Concept)
+
+---
+
+## Learning Outcomes
+
+- Spring Framework
+- Spring Boot
+- Dependency Injection
+- ORM using Hibernate
+- Spring Data JPA
+- REST APIs
+- Maven Project Management
+
+---
+
+# Week 3 – Spring REST, JWT Authentication & Spring Security
+
+## Exercise 1 – Spring REST Web Services
+
+### Objectives
+
+Develop RESTful web services using Spring Boot.
+
+### Topics
+
+- REST Architecture
+- @RestController
+- @RequestMapping
+- @GetMapping
+- @PostMapping
+- @PathVariable
+- @RequestBody
+- ResponseEntity
+
+---
+
+## Exercise 2 – Country REST API
+
+### Features
+
+- Retrieve country details
+- JSON Response
+- REST Endpoint Mapping
+
+### Sample Endpoint
+
+```
+GET /country
+```
+
+---
+
+## Exercise 3 – JWT Authentication
+
+### Objective
+
+Implement secure authentication using JSON Web Token (JWT).
+
+### Components Created
+
+- AuthenticationController
+- AuthenticationRequest
+- AuthenticationResponse
+- JwtUserDetailsService
+- JwtUtil
+- JwtRequestFilter
+- SecurityConfig
+
+---
+
+### Topics Covered
+
+- Spring Security
+- AuthenticationManager
+- UserDetailsService
+- JWT Token Generation
+- JWT Validation
+- Security Filter Chain
+- Authentication Flow
+
+---
+
+### Sample Endpoint
+
+```
+POST /authenticate
+```
+
+---
+
+### Learning Outcomes
+
+- Spring Security
+- JWT Authentication
+- Secure REST APIs
+- Token Based Authentication
+- Authentication Filters
+
+---
+
+# Week 4 – Microservices
+
+## Exercise 1 – Account Microservice
+
+### Objective
+
+Create a RESTful Account Microservice.
+
+### Technologies
+
+- Spring Boot
+- Spring Web
+- Maven
+
+### REST API
+
+```
+GET /accounts/{number}
+```
+
+Example
+
+```
+http://localhost:8080/accounts/00987987973432
+```
+
+Sample Response
+
+```json
+{
+  "number":"00987987973432",
+  "type":"savings",
+  "balance":234343
+}
+```
+
+---
+
+## Exercise 2 – Loan Microservice
+
+### Objective
+
+Create an independent Loan Microservice.
+
+### Technologies
+
+- Spring Boot
+- Spring Web
+- Maven
+
+### Configuration
+
+```
+server.port=8081
+```
+
+### REST API
+
+```
+GET /loans/{number}
+```
+
+Example
+
+```
+http://localhost:8081/loans/H00987987972342
+```
+
+Sample Response
+
+```json
+{
+  "number":"H00987987972342",
+  "type":"car",
+  "loan":400000,
+  "emi":3258,
+  "tenure":18
+}
+```
+
+---
+
+## Microservices Folder Structure
+
+```
+Week-4
+└── Microservices
+    ├── account
+    └── loan
+```
+
+---
+
+## Learning Outcomes
+
+- Microservices Architecture
+- Spring Boot REST APIs
+- Multiple Maven Projects
+- Independent Deployment
+- Port Configuration
+- JSON Response Handling
+- Browser & CURL API Testing
 
 ---
 
@@ -116,8 +369,12 @@ This repository documents the exercises completed during the **Java Full Stack E
 - Maven
 - Spring Framework
 - Spring Boot
+- Spring Security
 - Spring Data JPA
 - Hibernate
+- REST API
+- JWT Authentication
+- Microservices
 - H2 Database
 - JUnit 5
 - Mockito
@@ -131,7 +388,7 @@ This repository documents the exercises completed during the **Java Full Stack E
 
 # Repository Structure
 
-```
+```text
 JAVA_FSE_Hanson_Exercises
 
 ├── Week-1
@@ -139,21 +396,30 @@ JAVA_FSE_Hanson_Exercises
 │   ├── Data Structures & Algorithms
 │   ├── PL SQL
 │   ├── TDD using JUnit5 & Mockito
-│   └── SLF4J Logging Framework
+│   └── SLF4J Logging
 │
 ├── Week-2
-│   ├── Spring_Core_Maven
-│   └── SpringDataJPA_SpringBoot_Hibernate
-│       ├── Exercise1_EmployeeManagement_Setup_Entities
-│       ├── Exercise2_EmployeeManagement_CRUD_Repository
-│       └── Exercise3_EmployeeManagement_AdvancedFeatures
+│   ├── Spring Core Maven
+│   └── Spring Data JPA & Hibernate
+│
+├── Week-3
+│   ├── HelloWorldREST
+│   ├── CountryREST
+│   ├── CreateSpringWebProject
+│   ├── LoadCountryXML
+│   └── JWTAuthentication
+│
+├── Week-4
+│   └── Microservices
+│       ├── account
+│       └── loan
 │
 └── README.md
 ```
 
 ---
 
-# Learning Outcomes
+# Overall Learning Outcomes
 
 Through these exercises, I gained practical experience in:
 
@@ -164,17 +430,23 @@ Through these exercises, I gained practical experience in:
 - PL/SQL Programming
 - Spring Framework
 - Spring Boot
+- Spring Security
+- JWT Authentication
 - Spring Data JPA
 - Hibernate ORM
-- REST API Development
+- RESTful Web Services
+- Microservices Architecture
 - Maven Build Management
 - Unit Testing using JUnit 5
-- Mocking using Mockito
-- Logging using SLF4J
-- Version Control using Git & GitHub
+- Mockito Framework
+- SLF4J Logging
+- Git & GitHub Version Control
+- Visual Studio Code Development
 
 ---
 
-**Created By**
+# Author
 
 **Keerthika Murugan**
+
+**Java Full Stack Engineering (FSE) – Digital Nurture Program**
