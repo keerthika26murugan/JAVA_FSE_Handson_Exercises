@@ -1,6 +1,6 @@
 # Java FSE Hanson Exercises
 
-This repository documents the exercises completed during the **Java Full Stack Engineering (FSE) Digital Nurture Program**. The exercises cover Core Java, Spring Framework, Spring Boot, Spring Data JPA, Hibernate, RESTful Web Services, Microservices, Testing, Logging, JWT Authentication, and Database Programming.
+This repository documents the exercises completed during the **Java Full Stack Engineering (FSE) Digital Nurture Program**. The exercises cover Core Java, Spring Framework, Spring Boot, Spring Data JPA, Hibernate, RESTful Web Services, Spring Security, JWT Authentication, Microservices, Angular Fundamentals, Testing, Logging, and Database Programming.
 
 ---
 
@@ -9,9 +9,11 @@ This repository documents the exercises completed during the **Java Full Stack E
 ## Modules Covered
 
 ### 1. Design Principles & Design Patterns
+
 **Objective:** Learn software design principles and implement commonly used design patterns.
 
-### Topics
+#### Topics
+
 - SOLID Principles
 - Singleton Pattern
 - Factory Pattern
@@ -24,7 +26,7 @@ This repository documents the exercises completed during the **Java Full Stack E
 
 **Objective:** Solve programming problems using efficient algorithms.
 
-### Topics
+#### Topics
 
 - Arrays
 - Strings
@@ -39,7 +41,7 @@ This repository documents the exercises completed during the **Java Full Stack E
 
 **Objective:** Develop database programs using Oracle PL/SQL.
 
-### Topics
+#### Topics
 
 - Procedures
 - Functions
@@ -54,7 +56,7 @@ This repository documents the exercises completed during the **Java Full Stack E
 
 **Objective:** Learn unit testing and mocking techniques.
 
-### Topics
+#### Topics
 
 - JUnit 5
 - Assertions
@@ -70,7 +72,7 @@ This repository documents the exercises completed during the **Java Full Stack E
 
 **Objective:** Implement logging for monitoring and debugging.
 
-### Topics
+#### Topics
 
 - SLF4J
 - Logback
@@ -95,11 +97,13 @@ This repository documents the exercises completed during the **Java Full Stack E
 
 # Week 2 – Spring Framework, Spring Boot, Spring Data JPA & Hibernate
 
-## 1. Spring Core with Maven
+## Spring Core with Maven
 
-**Objective:** Learn Spring Framework fundamentals using Maven.
+### Objective
 
-### Topics
+Learn Spring Framework fundamentals using Maven.
+
+#### Topics
 
 - Spring IoC Container
 - Dependency Injection
@@ -110,54 +114,23 @@ This repository documents the exercises completed during the **Java Full Stack E
 
 ---
 
-## 2. Spring Boot & Spring Data JPA
+## Spring Boot & Spring Data JPA
 
-### Exercise 1 – Employee Management System
+### Employee Management System
 
-**Objective:** Configure Spring Boot with Spring Data JPA.
-
-### Topics
+#### Topics
 
 - Spring Boot Setup
 - Maven
 - H2 Database
 - Entity Mapping
-- Department Entity
-- Employee Entity
 - One-To-Many Mapping
 - Many-To-One Mapping
-
----
-
-### Exercise 2 – CRUD Repository & REST API
-
-**Objective:** Perform CRUD operations using Spring Data JPA.
-
-### Topics
-
-- JpaRepository
-- REST Controller
-- GET API
-- POST API
-- DELETE API
+- CRUD Repository
 - Pagination
 - Sorting
-
----
-
-### Exercise 3 – Advanced Hibernate Features
-
-**Objective:** Learn advanced persistence concepts.
-
-### Topics
-
-- Hibernate
 - JPA Auditing
-- CreatedDate
-- LastModifiedDate
-- Projection
-- Batch Processing
-- Multiple Datasource (Concept)
+- Hibernate Features
 
 ---
 
@@ -166,7 +139,7 @@ This repository documents the exercises completed during the **Java Full Stack E
 - Spring Framework
 - Spring Boot
 - Dependency Injection
-- ORM using Hibernate
+- Hibernate ORM
 - Spring Data JPA
 - REST APIs
 - Maven Project Management
@@ -175,46 +148,24 @@ This repository documents the exercises completed during the **Java Full Stack E
 
 # Week 3 – Spring REST, JWT Authentication & Spring Security
 
-## Exercise 1 – Spring REST Web Services
+## Objectives
 
-### Objectives
+Develop secure RESTful web services using Spring Boot and Spring Security.
 
-Develop RESTful web services using Spring Boot.
-
-### Topics
+### Topics Covered
 
 - REST Architecture
-- @RestController
-- @RequestMapping
-- @GetMapping
-- @PostMapping
-- @PathVariable
-- @RequestBody
+- REST Controllers
+- Request Mapping
 - ResponseEntity
-
----
-
-## Exercise 2 – Country REST API
-
-### Features
-
-- Retrieve country details
-- JSON Response
-- REST Endpoint Mapping
-
-### Sample Endpoint
-
-```
-GET /country
-```
-
----
-
-## Exercise 3 – JWT Authentication
-
-### Objective
-
-Implement secure authentication using JSON Web Token (JWT).
+- Spring Security
+- Authentication Manager
+- UserDetailsService
+- JWT Authentication
+- JWT Token Generation
+- JWT Validation
+- Security Filter Chain
+- Authentication Flow
 
 ### Components Created
 
@@ -228,158 +179,121 @@ Implement secure authentication using JSON Web Token (JWT).
 
 ---
 
-### Topics Covered
+## Learning Outcomes
 
-- Spring Security
-- AuthenticationManager
-- UserDetailsService
-- JWT Token Generation
-- JWT Validation
-- Security Filter Chain
-- Authentication Flow
-
----
-
-### Sample Endpoint
-
-```
-POST /authenticate
-```
-
----
-
-### Learning Outcomes
-
+- RESTful Web Services
 - Spring Security
 - JWT Authentication
-- Secure REST APIs
-- Token Based Authentication
-- Authentication Filters
+- Secure API Development
+- Token-Based Authentication
 
 ---
 
 # Week 4 – Microservices
 
-## Exercise 1 – Account Microservice
+## Objectives
 
-### Objective
+Develop independent Spring Boot microservices and expose REST APIs.
 
-Create a RESTful Account Microservice.
+### Microservices Developed
 
-### Technologies
-
-- Spring Boot
-- Spring Web
-- Maven
-
-### REST API
-
-```
-GET /accounts/{number}
-```
-
-Example
-
-```
-http://localhost:8080/accounts/00987987973432
-```
-
-Sample Response
-
-```json
-{
-  "number":"00987987973432",
-  "type":"savings",
-  "balance":234343
-}
-```
-
----
-
-## Exercise 2 – Loan Microservice
-
-### Objective
-
-Create an independent Loan Microservice.
-
-### Technologies
+### Account Microservice
 
 - Spring Boot
-- Spring Web
+- REST Controller
 - Maven
+- JSON Response
 
-### Configuration
+### Loan Microservice
 
-```
-server.port=8081
-```
-
-### REST API
-
-```
-GET /loans/{number}
-```
-
-Example
-
-```
-http://localhost:8081/loans/H00987987972342
-```
-
-Sample Response
-
-```json
-{
-  "number":"H00987987972342",
-  "type":"car",
-  "loan":400000,
-  "emi":3258,
-  "tenure":18
-}
-```
-
----
-
-## Microservices Folder Structure
-
-```
-Week-4
-└── Microservices
-    ├── account
-    └── loan
-```
+- Spring Boot
+- REST Controller
+- Separate Server Port
+- JSON Response
 
 ---
 
 ## Learning Outcomes
 
 - Microservices Architecture
-- Spring Boot REST APIs
-- Multiple Maven Projects
 - Independent Deployment
+- REST API Development
 - Port Configuration
 - JSON Response Handling
-- Browser & CURL API Testing
+- API Testing
+
+---
+
+# Week 5 – Angular Fundamentals
+
+## Objective
+
+Learn the fundamentals of Angular by building interactive web applications using components, data binding, event handling, forms, and TypeScript.
+
+---
+
+## Topics Covered
+
+- Angular CLI
+- Angular Project Structure
+- Standalone Components
+- Component Creation
+- Templates and Styling
+- TypeScript Basics
+- Interpolation
+- Property Binding
+- Event Binding
+- Two-Way Data Binding
+- User Input Handling
+- Forms
+- Conditional Rendering
+- Angular Directives
+- Angular Development Server
+
+---
+
+## Hands-on Activities
+
+Implemented multiple Angular hands-on exercises to understand component-based architecture, dynamic data binding, event handling, user input processing, forms, and basic business logic using TypeScript.
+
+---
+
+## Learning Outcomes
+
+- Angular Fundamentals
+- Component-Based Architecture
+- TypeScript Programming
+- Data Binding
+- Event Handling
+- Forms
+- Angular CLI
+- Front-End Development
 
 ---
 
 # Technologies Used
 
 - Java 21
-- Maven
 - Spring Framework
 - Spring Boot
 - Spring Security
 - Spring Data JPA
 - Hibernate
-- REST API
+- RESTful Web Services
 - JWT Authentication
 - Microservices
+- Angular
+- TypeScript
+- HTML5
+- CSS3
+- Maven
 - H2 Database
 - JUnit 5
 - Mockito
 - SLF4J
 - Logback
+- Node.js
+- npm
 - Git
 - GitHub
 - Visual Studio Code
@@ -414,6 +328,9 @@ JAVA_FSE_Hanson_Exercises
 │       ├── account
 │       └── loan
 │
+├── Week-5
+│   └── angular-handson
+│
 └── README.md
 ```
 
@@ -436,6 +353,9 @@ Through these exercises, I gained practical experience in:
 - Hibernate ORM
 - RESTful Web Services
 - Microservices Architecture
+- Angular Development
+- TypeScript Programming
+- Front-End Development
 - Maven Build Management
 - Unit Testing using JUnit 5
 - Mockito Framework
@@ -445,7 +365,7 @@ Through these exercises, I gained practical experience in:
 
 ---
 
-# Author
+# KEERTHIKA MURUGAN
 
 **Keerthika Murugan**
 
