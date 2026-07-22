@@ -1,0 +1,23 @@
+<h2>Student List</h2>
+
+<table>
+
+<tr>
+
+<th>ID</th>
+<th>Name</th>
+<th>Department</th>
+<th>Mark</th>
+
+</tr>
+
+<tr *ngFor="let s of students">
+
+<td>{{s.id}}</td>
+<td>{{s.name}}</td>
+<td>{{s.department}}</td>
+<td>{{s.mark}}</td>
+
+</tr>
+
+</table>

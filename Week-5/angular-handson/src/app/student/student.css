@@ -1,0 +1,22 @@
+h2{
+    color:blue;
+}
+
+table{
+    border-collapse:collapse;
+    width:70%;
+}
+
+table,th,td{
+    border:1px solid black;
+}
+
+th{
+    background-color:green;
+    color:white;
+}
+
+th,td{
+    padding:10px;
+    text-align:center;
+}
